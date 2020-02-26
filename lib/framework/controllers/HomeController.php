@@ -8,17 +8,7 @@ class HomeController
 {
     public function index()
     {
-        return view('home',['name' => 'safi']);
-    }
-
-    public function about()
-    {
-        echo 'this is about page from homecontroller';
-    }
-
-    public function page($page)
-    {
-        echo 'this page is '.$page.'from Home Controller';
+        return view('home');
     }
 
     public function tinyUrl()
@@ -27,7 +17,7 @@ class HomeController
             $tinyurl = self::generateUrl($_POST['url']);
             return json_encode(['tiny_url' => $tinyurl]);
         } catch (\Throwable $th) {
-            return json_encode(\trigger_error($th->getMessage()));
+            return json_encode($th->getMessage());
         }
     }
 
