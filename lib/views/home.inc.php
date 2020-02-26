@@ -46,7 +46,6 @@
             loader.hide();
             var template = `
               <span>Congratulations! your tiny url is ready: </span>
-              <span class="glyphicon glyphicon-thumb-right"></span>
               <a href="${response.tiny_url}" target="_blank" style="color:#ff9f35">${response.tiny_url}</a>
             `;
             $('#tinyurltext').html(template);
